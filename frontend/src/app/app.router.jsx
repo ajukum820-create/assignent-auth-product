@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 
 import Register from "../modules/auth/pages/Register";
 import Login from "../modules/auth/pages/Login";
@@ -11,6 +11,11 @@ import Products from "../modules/auth/products/pages/Products";
 import ProductLayout from "./ProductLayout";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navigate to="/login" replace />,
+  },
+
   // Auth pages
   {
     path: "/register",
@@ -44,5 +49,4 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
 export default router;
