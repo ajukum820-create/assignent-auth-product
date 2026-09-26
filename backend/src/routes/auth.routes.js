@@ -19,7 +19,7 @@ const router = Router();
 router.post("/register", registerValidtion, regitserController);
 
 //=====------------------LOGIN ROUTE-------------------------
-router.post("/lOGIN", loginValidtion, loginController);
+router.post("/login", loginValidtion, loginController);
 
 //======================refresh-token======================
 router.post("/refresh", refreshController);
