@@ -17,6 +17,14 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
+// Backend health check
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Backend is running successfully!",
+  });
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 
