@@ -38,7 +38,7 @@ export const registerValidtion = [
     .withMessage("Password must be in string format")
     .bail()
     .trim()
-    .isLength({ min: 8, max: 100 })
+    .isLength({ min: 5, max: 100 })
     .withMessage("Password must be between 8 and 100 characters"),
 
   //=====================confrim password=======================
